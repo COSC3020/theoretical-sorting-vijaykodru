@@ -18,10 +18,25 @@ on the complexity of the general sorting problem we covered in class.
 
 Add your answers to this markdown file.
 
+To verify the claim of a sorting algorithm achieving $O(n)$ time complexity based on comparisons of two elements at a time, I would try the following with the blackbox implementation of the sorting algorithm:
 
-With the blackbox implementation of the sorting algorithm, I would start by testing it first different set of arrays, such as randomly sorted array, reverse sorted array, already sorted array of same size and graph them with the attributes of time vs number of elements. I would try the same with multiple scenerios where the number of elements increases and decreases based on the input. And if the claims are really true, the graph should show a linear growth meaning the time it takes to sort the array that is randmoly sorted, reverse sorted and already sorted array of same size should take about the same time and this should stay the same as the number of elements increase as well. However, this cannot hold because in class, we learned that comparison-based sorting algorithms have a lower bound of $Ω(nlogn)$. This lower bound is based on the fact that, in the worst case, every comparison-based sorting algorithm must examine $log(n!)= Ω(nlogn)$ bits of information to correctly order all possible permutations of n elements.
+Test Cases: I would generated various test cases encompassing different input sizes and characteristics. These test cases included:
+
+-Randomly ordered arrays
+-Reverse sorted arrays
+-Already sorted arrays
+-Arrays with nearly all elements identical
+-Arrays with many duplicates
+-Arrays with a few unique elements
+-Arrays with different data types (numbers, strings, custom objects)
+
+Measure Time: Utilizing the black-box implementation of the sorting algorithm, I would try sorting each test case multiple times to ensure consistency and measure the execution time for each sorting operation.
+
+Analyze Results: I would plot the execution times against the input size for each type of test case. I would expect it to show a general trend of $O(n)$ time complexity, as claimed. Specifically, I would look for linear growth in execution time as the input size increased. Along with this I would look for any sudden changes in the execution times which tells me that there is a weakness in the code. As we've learned, these algorithms have a lower bound of $Ω(n\log n)$ because they need to examine $log(n!)= Ω(nlogn)$ bits of information in the worst-case scenario to sort all permutations of elements accurately. Consequently, any assertion that a comparison-based sorting algorithm achieves $O(n)$ time complexity would directly challenge this lower bound, unless the algorithm functions beyond the constraints of the conventional comparison-based model.
 
 references:
+
+theoretical-sorting-IshitaPatel18
 
 theoretical-sorting-ross223
 
