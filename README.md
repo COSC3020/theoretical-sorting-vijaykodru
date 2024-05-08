@@ -17,3 +17,6 @@ Also give a theoretical argument for why X could or could not be correct, based
 on the complexity of the general sorting problem we covered in class.
 
 Add your answers to this markdown file.
+
+
+With the blackbox implementation of the sorting algorithm, I would start by testing it first different set of arrays, such as randomly sorted array, reverse sorted array, already sorted array of same size and graph them with the attributes of time vs number of elements. I would try the same with multiple scenerios where the number of elements increases and decreases based on the input. And if the claims are really true, the graph should show a linear growth meaning the time it takes to sort the array that is randmoly sorted, reverse sorted and already sorted array of same size should take about the same time and this should stay the same as the number of elements increase as well. However, this cannot hold because in class, we learned that comparison-based sorting algorithms have a lower bound of $Ω(nlogn)$. This lower bound is based on the fact that, in the worst case, every comparison-based sorting algorithm must examine $log(n!)= Ω(nlogn)$ bits of information to correctly order all possible permutations of n elements.
